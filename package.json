@@ -1,0 +1,33 @@
+{
+  "name": "juof",
+  "version": "1.0.0",
+  "description": "For objects and functions manipulation in javascript. Use for inheritance, attribute etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive",
+    "basic": "node examples/basic/app.js",
+    "attribute": "node examples/attribute/app.js"
+  },
+  "author": "josephuz",
+  "license": "MIT",
+  "files": [
+    "package.json",
+    "index.js",
+    "libs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JosephUz/juof.git"
+  },
+  "keywords": [
+    "OOP",
+    "Javascript OOP",
+    "Inheritance",
+    "Attribute",
+    "Object Manuplation",
+    "Function Manuplation"
+  ],
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
