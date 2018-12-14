@@ -181,8 +181,8 @@ describe("attribute index.js test", function () {
     });
 
     it("usage of attribute as a function", function (done) {
-        function TestAttribute() {
-            this.scope.text = this.arguments[0];
+        function TestAttribute(text) {
+            this.scope.text = text;
             this.done();
         }
 

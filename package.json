@@ -1,11 +1,12 @@
 {
   "name": "juof",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "For objects and functions manipulation in javascript. Use for inheritance, attribute etc.",
   "main": "index.js",
   "scripts": {
     "test": "mocha --recursive",
     "basic": "node examples/basic/app.js",
+    "trial": "node examples/trial/app.js",
     "attribute": "node examples/attribute/app.js"
   },
   "author": "josephuz",

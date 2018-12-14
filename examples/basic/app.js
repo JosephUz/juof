@@ -7,6 +7,7 @@ function Person(name) {
 }
 
 function Male(name) {
+    this.super(name);
     this.gender = "M";
 }
 

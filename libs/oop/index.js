@@ -24,23 +24,19 @@ exports.abstract = function (type) {
 
 exports.inherit = function (type, base) {
     function inherit() {
-        var result = null, scope = this;
+        var scope = this;
 
-        if (!(this instanceof inherit))
-            scope = {};
+        Object.defineProperties(scope, {
+            super: {
+                get: function () {
+                    return (function () {
+                        base.apply(scope, arguments);
+                    }).bind(scope)
+                }
+            }
+        });
 
-        arguments.length++;
-        arguments[arguments.length - 1] = inherit;
-        result = base.apply(scope, arguments);
-
-        arguments[arguments.length - 1] = base;
-        // classes return their instance. also do not make a return
-        // so if there is a return, do not call type constructor
-        // but call only base constructor so that you can be managed from one place
-        if (!result)
-            result = type.apply(scope, arguments);
-
-        if (result) return result;
+        type.apply(scope, arguments);
     }
     var fn = inherit.toString().replace(/(inherit)/g, type.name);
     var ju = new Function("type", "base", "return " + fn + ";")(type, base);

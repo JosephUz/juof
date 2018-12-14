@@ -48,8 +48,8 @@ function JuUserAttribute() {
 }
 
 // The attribute that controls method permissions.
-function MethodPermissionAttribute() {
-    var method = this.arguments[0], user = this.scope.user;
+function MethodPermissionAttribute(method) {
+    var user = this.scope.user;
     if (!user.instanceId) {
         this.error("The user has been deleted.");
         console.log(this.status);

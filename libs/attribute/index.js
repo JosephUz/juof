@@ -8,7 +8,24 @@ exports.inherit = function (attr) {
     if (typeof (attr) !== "function")
         throw new Error("attr parameter must be function.");
 
-    return juoop.inherit(attr, JuAttribute);
+    function inherit(scopeOfObject, scopeArgsOfObject, next) {
+        var scope = this;
+
+        if (this instanceof inherit) {
+            JuAttribute.call(scope, scopeOfObject, scopeArgsOfObject, next);
+        } else {
+            return JuAttribute.call({}, inherit, arguments);
+        }
+
+        attr.apply(scope, scope.arguments);
+    }
+    var fn = inherit.toString().replace(/(inherit)/g, attr.name);
+    var ju = new Function("attr", "JuAttribute", "return " + fn + ";")(attr, JuAttribute);
+
+    ju.prototype = attr.prototype;
+    ju.prototype.__proto__ = JuAttribute.prototype;
+
+    return ju;
 }
 
 exports.bind = function (func, attr) {

@@ -34,8 +34,8 @@ Object.keys(Method.prototype).forEach(function (key) {
 });
 
 // The attribute that method execution according to the user's presence.
-function RunMethodAttribute() {
-    var method = this.arguments[0], user = this.scope.user;
+function RunMethodAttribute(method) {
+    var user = this.scope.user;
     if (user.instanceId) {
         console.log(user.name + " wanted to run the " + method + " method.");
         this.done();

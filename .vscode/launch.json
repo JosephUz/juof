@@ -13,6 +13,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Launch Trial Example",
+            "program": "${workspaceFolder}/examples/trial/app.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Launch Attribute Example",
             "program": "${workspaceFolder}/examples/attribute/app.js"
         }

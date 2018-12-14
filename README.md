@@ -21,6 +21,7 @@ function Person(name) {
 }
 
 function Male (name) {
+    this.super(name); // Run base constructor function.
     this.gender = "M";
 }
 
@@ -141,6 +142,11 @@ new Male("JosephUz").cv();
 **Parameters:**
 
 * `scope`: The variable that attributes are applied to.
+
+
+### [Changelog][]
+
+[Changelog]: https://github.com/JosephUz/juof/blob/master/CHANGELOG.md
 
 
 ## Examples

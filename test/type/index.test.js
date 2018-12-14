@@ -8,11 +8,11 @@ describe("type index.js test", function () {
         }
 
         function FirstType() {
-
+            this.super();
         }
 
         function SecondType() {
-
+            this.super();
         }
 
         try {
@@ -34,7 +34,7 @@ describe("type index.js test", function () {
         }
 
         function Type() {
-
+            this.super();
         }
 
         Type.prototype.getId = function () {
