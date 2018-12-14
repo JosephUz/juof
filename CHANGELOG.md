@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.1] - 2019-12-14
 ### Added
 - Super function that can be call in constructor of derived class for inheritance of oop.
+- All attributes can use parameters anymore.
 - [CHANGELOG.md](https://github.com/JosephUz/juof/blob/master/CHANGELOG.md)
 - Trial example that users want to try codes.
 
