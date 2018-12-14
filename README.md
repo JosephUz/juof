@@ -143,6 +143,9 @@ new Male("JosephUz").cv();
 
 * `scope`: The variable that attributes are applied to.
 
+## Changelog
+
+All notable changes to this project will be documented in this file.
 
 ### [Changelog][]
 
