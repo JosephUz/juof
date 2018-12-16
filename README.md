@@ -143,6 +143,104 @@ new Male("JosephUz").cv();
 
 * `scope`: The variable that attributes are applied to.
 
+
+#### `juof.function`
+`Used to add tags to functions and to preserve the original form after manipulation.`
+
+
+#### `juof.function.create(query, fn)`
+`Create a new instance of JuFunction.  Return instance of JuFunction.`
+
+**Parameters:**
+
+* `query`: String query of tags. Example: "number:0;boolean:true;string:text;array:one,two"
+
+* `fn`:  Original function.
+
+***Or***
+
+#### `juof.function.create(fn)`
+
+**Parameters:**
+
+* `fn`:  Original function.
+
+
+#### `juof.function.define(scope, key, query, fn)`
+`Create a new instance of JuFunction and define a field by key into scope object. Return instance of JuFunction.`
+
+**Parameters:**
+
+* `scope`: Object that is defined a field by key into. 
+
+* `key`:  Key that is for defining a field into scope object.
+
+* `query`: String query of tags. Example: "number:0;boolean:true;string:text;array:one,two"
+
+* `fn`:  Original function.
+
+***Or***
+
+#### `juof.function.define(scope, key, fn)`
+
+**Parameters:**
+
+* `scope`: Object that is defined a field by key into. 
+
+* `key`:  Key that is for defining a field into scope object.
+
+* `fn`:  Original function.
+
+
+#### `juof.function.each(scope, eachFn)`
+`Function that do forEach instances of JuFunction in the scope object.`
+
+**Parameters:**
+
+* `scope`: Object that is defined a field by key into. 
+
+* `eachFn`:  Each function. 
+
+
+#### `eachFn(key, instance)`
+`juof.function.each(scope, eachFn)`
+
+**Parameters:**
+
+* `key`: Key that is for defining a field into scope object.
+
+* `instance`:  Instance of JuFunction.
+
+
+#### `instance of JuFunction`
+
+**Fields:**
+
+* `tags`: Object of tags.
+
+* `scope`:  Object that is defined a field by key into or bound object to function. 
+
+* `query`: String query of tags.
+
+* `function`: Manipulated function.
+
+* `original`: Original function.
+
+**Prototypes:**
+
+* `bind`: Runs as same in bind prototype of Function but available multiple times.
+
+* `apply`: Runs as same in apply prototype of Function. 
+
+* `call`:  Runs as same in call prototype of Function. 
+
+* `run`: Runs the manipulated function.
+
+* `pure`: Runs the original function.
+
+* `value`: Manipulate function and manipulated function.
+
+
 ## Changelog
 
 All notable changes to this project will be documented in this file.

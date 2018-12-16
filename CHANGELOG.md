@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2019-12-17
+### Added
+- JuFunction: Used to add tags to functions and to preserve the original form after manipulation. [Usage For Defining Field Into Scope](https://github.com/JosephUz/juof/blob/master/examples/function/app.js#L82)
+- All function unit test added. [Unit Test For Function](https://github.com/JosephUz/juof/tree/master/test/function)
+- Function example added. [Example Function](https://github.com/JosephUz/juof/blob/master/examples/function)
+
+### Changed
+- Readme updated for JuFunction. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#juoffunction)
+- Visual Studio launch.json for mocha debug of current test js file. [launch.json](https://github.com/JosephUz/juof/blob/master/.vscode/launch.json)
+
+
 ## [1.0.1] - 2019-12-14
 ### Added
 - Super function that can be call in constructor of derived class for inheritance of oop. [Usage](https://github.com/JosephUz/juof/blob/master/examples/basic/app.js#L10)

@@ -7,20 +7,40 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Basic Example",
-            "program": "${workspaceFolder}/examples/basic/app.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
             "name": "Launch Trial Example",
             "program": "${workspaceFolder}/examples/trial/app.js"
         },
         {
             "type": "node",
             "request": "launch",
+            "name": "Launch Basic Example",
+            "program": "${workspaceFolder}/examples/basic/app.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Launch Attribute Example",
             "program": "${workspaceFolder}/examples/attribute/app.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Function Example",
+            "program": "${workspaceFolder}/examples/function/app.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Mocha Current File",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "--timeout",
+                "999999",
+                "--colors",
+                "${file}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
         }
     ]
 }
