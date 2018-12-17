@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2019-12-17
+### Fixed
+- There was an error in calling the super function in multilevel inheritance. [Bug Fixed Example](https://github.com/JosephUz/juof/tree/master/examples/basic/multilevel.js)
+
+### Added
+- Unit test "calling super function for multi level inheritance" is added. [Test File](https://github.com/JosephUz/juof/blob/master/test/oop/index.test.js#L134)
+- Multilevel inheritance example. [Multilevel Inheritance Example](https://github.com/JosephUz/juof/tree/master/examples/basic/multilevel.js)
+
+
 ## [1.0.2] - 2019-12-17
 ### Added
 - JuFunction: Used to add tags to functions and to preserve the original form after manipulation. [Usage For Defining Field Into Scope](https://github.com/JosephUz/juof/blob/master/examples/function/app.js#L82)

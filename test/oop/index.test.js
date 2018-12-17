@@ -130,4 +130,31 @@ describe("oop index.js test", function () {
             done(new Error("using inherit function throw an unkonwn error."));
         }
     });
+
+    it("calling super function for multi level inheritance", function (done) {
+        try {
+            var Response = function Response(req, res) {
+                this.req = req;
+                this.res = res;
+            }
+
+            var Controller = juoop.inherit(function Controller(route, req, res) {
+                this.super(req, res);
+                this.route = route;
+            }, Response);
+
+            var UserController = juoop.inherit(function UserController(route, req, res) {
+                this.super(route, req, res);
+            }, Controller);
+
+            var instance = new UserController("route", "req", "res");
+
+            if (instance.route == "route" && instance.req == "req" && instance.res == "res")
+                done();
+            else
+                done(new Error("calling super function for multi level inheritance is not working."));
+        } catch (err) {
+            done(err);
+        }
+    });
 });

@@ -1,4 +1,4 @@
-var exports = {};
+var exports = {}, runnedSuper = Symbol("super");
 
 exports.abstract = function (type) {
     function abstract() {
@@ -24,24 +24,20 @@ exports.abstract = function (type) {
 
 exports.inherit = function (type, base) {
     function inherit() {
-        var scope = this;
-
-        Object.defineProperties(scope, {
-            super: {
-                get: function () {
-                    return (function () {
-                        base.apply(scope, arguments);
-                    }).bind(scope)
-                }
-            }
-        });
-
-        type.apply(scope, arguments);
+        type.apply(this, arguments);
     }
     var fn = inherit.toString().replace(/(inherit)/g, type.name);
     var ju = new Function("type", "base", "return " + fn + ";")(type, base);
 
     ju.prototype = type.prototype;
+    ju.prototype.super = function () {
+        if(this[runnedSuper] && this[runnedSuper] == ju){
+            base.prototype.super.apply(this, arguments);
+        } else {
+            this[runnedSuper] = ju;
+            base.apply(this, arguments);
+        }
+    }
     ju.prototype.__proto__ = base.prototype;
 
     return ju;

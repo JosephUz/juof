@@ -19,6 +19,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Launch Multilevel Inheritance Example",
+            "program": "${workspaceFolder}/examples/basic/multilevel.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Launch Attribute Example",
             "program": "${workspaceFolder}/examples/attribute/app.js"
         },
