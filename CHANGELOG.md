@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2019-12-17
+### Fixed
+- There was an error  "name of undefined" in calling "function.define" without query parameter.
+
+### Added
+- Unit test "usage define function with only function" is added. [Test File](https://github.com/JosephUz/juof/blob/master/test/function/index.test.js#L52)
+
+
 ## [1.0.4] - 2019-12-17
 ### Added
 - Unit test "function name field" is added. [Test File](https://github.com/JosephUz/juof/blob/master/test/function/jufunction.test.js#L167)

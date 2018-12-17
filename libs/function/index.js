@@ -7,9 +7,9 @@ exports.create = function (query, fn) {
 }
 
 exports.define = function (scope, query, fn) {
-    var key = fn.name;
-    scope[key] = new JuFunction(query, fn).bind(scope);
-    return scope[key];
+    var instance = new JuFunction(query, fn).bind(scope);
+    scope[instance.name] = instance;
+    return instance;
 }
 
 exports.each = function (scope, eachFn) {

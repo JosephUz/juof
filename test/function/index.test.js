@@ -48,4 +48,18 @@ describe("function index.js test", function () {
             done(err);
         }
     });
+    
+    it("usage define function with only function", function (done) {
+        try {
+            var scope = {};
+            var fn = function test() { };
+            var instance = jufn.define(scope, fn);
+            if (instance.original == fn && scope.test == instance && instance.name == "test")
+                done();
+            else
+                done(new Error("usage define function is not working."));
+        } catch (err) {
+            done(err);
+        }
+    });
 });
