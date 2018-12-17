@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.4] - 2019-12-17
 ### Added
 - Unit test "function name field" is added. [Test File](https://github.com/JosephUz/juof/blob/master/test/function/jufunction.test.js#L167)
-- Add field of "name" into JuFunction.
+- Add field of "name" into JuFunction. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#instance-of-jufunction)
 
 ### Changed
 - juof.function.define function changed. Removed "key" parameter and add required to "fn" parameter is that must be named. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#juoffunctiondefinescope-key-query-fn)
