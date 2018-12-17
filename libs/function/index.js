@@ -6,7 +6,8 @@ exports.create = function (query, fn) {
     return new JuFunction(query, fn);
 }
 
-exports.define = function (scope, key, query, fn) {
+exports.define = function (scope, query, fn) {
+    var key = fn.name;
     scope[key] = new JuFunction(query, fn).bind(scope);
     return scope[key];
 }
@@ -14,7 +15,7 @@ exports.define = function (scope, key, query, fn) {
 exports.each = function (scope, eachFn) {
     Object.keys(scope).forEach(function (key) {
         if (scope[key] instanceof JuFunction) {
-            eachFn(key, scope[key]);
+            eachFn(scope[key]);
         }
     });
 }

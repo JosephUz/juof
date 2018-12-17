@@ -163,4 +163,17 @@ describe("function jufunction.js test", function () {
             done(err);
         }
     });
+
+    it("function name field", function (done) {
+        try {
+            var instance = new JuFunction(function test() { });
+            if (instance.name == "test") {
+                done();
+            } else {
+                done(new Error("function name field is not working."));
+            }
+        } catch (err) {
+            done(err);
+        }
+    });
 });

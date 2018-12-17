@@ -79,7 +79,7 @@ scope = {
     auth: false
 };
 
-juof.function.define(scope, "log", "auth:true", function (text) {
+juof.function.define(scope, "auth:true", function log(text) {
     console.log(text);
 });
 
@@ -92,7 +92,7 @@ var Auth = juof.attribute.inherit(function Auth() {
 });
 
 // Bind all controller attributes with all functions like scope log in another js file.
-juof.function.each(scope, function (key, instance) {
+juof.function.each(scope, function (instance) {
     if (instance.tags.auth)
         instance.value(juof.attribute.bind(instance.function, Auth));
 });

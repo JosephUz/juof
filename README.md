@@ -166,30 +166,32 @@ new Male("JosephUz").cv();
 * `fn`:  Original function.
 
 
-#### `juof.function.define(scope, key, query, fn)`
-`Create a new instance of JuFunction and define a field by key into scope object. Return instance of JuFunction.`
+#### `juof.function.define(scope, query, fn)`
+`Create a new instance of JuFunction and define a field by function name into scope object. Return instance of JuFunction.`
 
 **Parameters:**
 
-* `scope`: Object that is defined a field by key into. 
-
-* `key`:  Key that is for defining a field into scope object.
+* `scope`: Object that is defined a field by function name into. 
 
 * `query`: String query of tags. Example: "number:0;boolean:true;string:text;array:one,two"
 
-* `fn`:  Original function.
+* `fn`:  Original function. Function that must be named. Example;
+
+```javascript
+
+juof.function.define(scope, query, function test() { /* ... */ });
+
+```
 
 ***Or***
 
-#### `juof.function.define(scope, key, fn)`
+#### `juof.function.define(scope, fn)`
 
 **Parameters:**
 
-* `scope`: Object that is defined a field by key into. 
+* `scope`: Object that is defined a field by function name into. 
 
-* `key`:  Key that is for defining a field into scope object.
-
-* `fn`:  Original function.
+* `fn`:  Original function. Function that must be named.
 
 
 #### `juof.function.each(scope, eachFn)`
@@ -197,17 +199,15 @@ new Male("JosephUz").cv();
 
 **Parameters:**
 
-* `scope`: Object that is defined a field by key into. 
+* `scope`: Object that is defined a field by function name into. 
 
 * `eachFn`:  Each function. 
 
 
-#### `eachFn(key, instance)`
-`juof.function.each(scope, eachFn)`
+#### `eachFn(instance)`
+`juof.function.each(scope, function (instance) { ... })`
 
 **Parameters:**
-
-* `key`: Key that is for defining a field into scope object.
 
 * `instance`:  Instance of JuFunction.
 
@@ -218,7 +218,9 @@ new Male("JosephUz").cv();
 
 * `tags`: Object of tags.
 
-* `scope`:  Object that is defined a field by key into or bound object to function. 
+* `scope`:  Object that is defined a field by function name into or bound object to function. 
+
+* `name`: Original function name.
 
 * `query`: String query of tags.
 

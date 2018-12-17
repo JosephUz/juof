@@ -1,6 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2019-12-17
+### Added
+- Unit test "function name field" is added. [Test File](https://github.com/JosephUz/juof/blob/master/test/function/jufunction.test.js#L167)
+- Add field of "name" into JuFunction.
+
+### Changed
+- juof.function.define function changed. Removed "key" parameter and add required to "fn" parameter is that must be named. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#juoffunctiondefinescope-key-query-fn)
+- juof.function.each -> eachFn function changed. This function is required one parameter anymore. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#juoffunctioneachscope-eachfn)
+
+
 ## [1.0.3] - 2019-12-17
 ### Fixed
 - There was an error in calling the super function in multilevel inheritance. [Bug Fixed Example](https://github.com/JosephUz/juof/tree/master/examples/basic/multilevel.js)

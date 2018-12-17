@@ -18,9 +18,9 @@ describe("function index.js test", function () {
     it("usage define function", function (done) {
         try {
             var scope = {};
-            var fn = function () { };
+            var fn = function test() { };
             var query = "number:0;boolean:true;string:text;array:one,two";
-            var instance = jufn.define(scope, "test", query, fn);
+            var instance = jufn.define(scope, query, fn);
             if (instance.query == query && instance.original == fn && instance.tags.number === 0 && instance.tags.boolean === true && instance.tags.string == "text" && instance.tags.array[1] == "two" && scope.test == instance)
                 done();
             else
@@ -33,12 +33,12 @@ describe("function index.js test", function () {
     it("usage each function", function (done) {
         try {
             var scope = {};
-            var fn = function () { };
+            var fn = function test() { };
             var query = "number:0;boolean:true;string:text;array:one,two";
-            var instance = jufn.define(scope, "test", query, fn);
+            var instance = jufn.define(scope, query, fn);
 
-            jufn.each(scope, function (key, inst) {
-                if (key == "test" && inst == instance) {
+            jufn.each(scope, function (inst) {
+                if (inst.name == "test" && inst == instance) {
                     done();
                 } else {
                     done(new Error("usage each function is not working."));

@@ -26,7 +26,12 @@ function JuFunction(query, fn) {
             get: function () {
                 return tags;
             }
-        }
+        },
+        name: {
+            get: function () {
+                return original.name;
+            }
+        },
     });
 
     var split = this.query.split(';');
