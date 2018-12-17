@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 - Add field of "name" into JuFunction. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#instance-of-jufunction)
 
 ### Changed
-- juof.function.define function changed. Removed "key" parameter and add required to "fn" parameter is that must be named. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#juoffunctiondefinescope-key-query-fn)
+- juof.function.define function changed. Removed "key" parameter and add required to "fn" parameter is that must be named. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#juoffunctiondefinescope-query-fn)
 - juof.function.each -> eachFn function changed. This function is required one parameter anymore. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#juoffunctioneachscope-eachfn)
 
 
