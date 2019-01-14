@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.0.5] - 2019-12-17
+## [1.0.5] - 2018-12-17
 ### Fixed
 - There was an error  "name of undefined" in calling "function.define" without query parameter.
 
@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
 - Unit test "usage define function with only function" is added. [Test File](https://github.com/JosephUz/juof/blob/master/test/function/index.test.js#L52)
 
 
-## [1.0.4] - 2019-12-17
+## [1.0.4] - 2018-12-17
 ### Added
 - Unit test "function name field" is added. [Test File](https://github.com/JosephUz/juof/blob/master/test/function/jufunction.test.js#L167)
 - Add field of "name" into JuFunction. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#instance-of-jufunction)
@@ -19,7 +19,7 @@ All notable changes to this project will be documented in this file.
 - juof.function.each -> eachFn function changed. This function is required one parameter anymore. [README.md](https://github.com/JosephUz/juof/blob/master/README.md#juoffunctioneachscope-eachfn)
 
 
-## [1.0.3] - 2019-12-17
+## [1.0.3] - 2018-12-17
 ### Fixed
 - There was an error in calling the super function in multilevel inheritance. [Bug Fixed Example](https://github.com/JosephUz/juof/tree/master/examples/basic/multilevel.js)
 
@@ -28,7 +28,7 @@ All notable changes to this project will be documented in this file.
 - Multilevel inheritance example. [Multilevel Inheritance Example](https://github.com/JosephUz/juof/tree/master/examples/basic/multilevel.js)
 
 
-## [1.0.2] - 2019-12-17
+## [1.0.2] - 2018-12-17
 ### Added
 - JuFunction: Used to add tags to functions and to preserve the original form after manipulation. [Usage For Defining Field Into Scope](https://github.com/JosephUz/juof/blob/master/examples/function/app.js#L82)
 - All function unit test added. [Unit Test For Function](https://github.com/JosephUz/juof/tree/master/test/function)
@@ -39,7 +39,7 @@ All notable changes to this project will be documented in this file.
 - Visual Studio launch.json for mocha debug of current test js file. [launch.json](https://github.com/JosephUz/juof/blob/master/.vscode/launch.json)
 
 
-## [1.0.1] - 2019-12-14
+## [1.0.1] - 2018-12-14
 ### Added
 - Super function that can be call in constructor of derived class for inheritance of oop. [Usage](https://github.com/JosephUz/juof/blob/master/examples/basic/app.js#L10)
 - All attributes can use parameters anymore. [Example Attribute](https://github.com/JosephUz/juof/blob/master/examples/attribute/user/method.js#L37) [Usage](https://github.com/JosephUz/juof/blob/master/examples/attribute/user/method.js#L33)
